@@ -570,7 +570,8 @@ bool Board::play_if_valid(Color& player_color, Move& move) {
 
     }
 
-
+    // 
+    if (move.is_check() && !under_check(player_color))
 
     return true;
 }

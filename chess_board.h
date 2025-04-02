@@ -181,6 +181,8 @@ public:
 
     // If the move is valid, and legal in current position, play it ; Return true. Else, return false
     bool play_if_valid(Color& player_color, Move& move);
+
+    bool under_check(Color& player_color);
 };
 
 #endif

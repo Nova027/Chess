@@ -90,13 +90,14 @@ public:
         clear();
     }
 
-    Piece_ptr operator[](int uid) {
+    const Piece_ptr& operator[](int uid) {
         if (pmap.find(uid) == pmap.end())
             return nullptr;
         return &(pmap[uid]);
     }
 
     int operator[](Piece_ptr p) {
+        if (p == nullptr) return -1;
         return p->id();
     }
 
